@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+.img-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 850px) {
+
+}
