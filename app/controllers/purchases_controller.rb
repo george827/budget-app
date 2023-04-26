@@ -2,7 +2,7 @@ class PurchasesController < ApplicationController
   def new
     @user = current_user
     @purchase = Purchase.new
-   
+
     @group = Group.find_by(id: params[:group_id])
   end
 
@@ -10,7 +10,7 @@ class PurchasesController < ApplicationController
     @purchase = current_user.purchases.build(purchase_params)
     @group = Group.find_by(id: params[:group_id])
     @group.purchases << @purchase
-   
+
     if @purchase.save
       flash[:success] = 'purchase saved successfully'
       redirect_to group_path(@group)

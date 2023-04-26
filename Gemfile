@@ -81,4 +81,4 @@ end
 
 gem 'cancan'
 gem 'devise'
-gem 'letter_opener'
+gem 'sass-rails'
