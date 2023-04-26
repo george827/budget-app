@@ -6,10 +6,10 @@ class Ability
 
     # Define abilities for the user here. For example:
     can :read, :all
-    can %i[create update destroy], Payment, user_id: user.id
-    can %i[create update destroy], Group, user_id: user.id
+    # can %i[create update destroy], Payment, user_id: user.id
+    # can %i[create update destroy], Group, user_id: user.id
 
-    return unless user.is? :admin
+    # return unless user.is? :admin
 
     can :manage, :all
     #   return unless user.present?

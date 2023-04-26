@@ -1,0 +1,10 @@
+<h1>Transaction</h1>
+<%= link_to "sign out", destroy_user_session_path, data: {turbo_method: :delete} %>
+
+    <% @groups.each do |group| %>
+    <%= link_to group_path(group) do %>
+      <%= render "group", group: group%>
+      <% end %>
+    <% end %>
+
+  <%= link_to "Add Item", new_group_path, class: "btn btn-primary" %>
