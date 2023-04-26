@@ -1,0 +1,12 @@
+<h1>Groups#show</h1>
+
+<%= render "group", group: @group%>
+
+<%@purchases.each do |purchases|%>
+<div class= "category-item">
+  <p><%= purchases.name %></p>
+  <p>$<%= purchases.amount %></p>
+</div>
+<%end%>
+
+<%= link_to "New Purtchase", new_group_purchase_path(@group), class: "btn btn-primary" %>

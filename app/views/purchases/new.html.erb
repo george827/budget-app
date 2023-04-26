@@ -1,0 +1,27 @@
+<h1>Purchases#new</h1>
+
+
+<%= form_with model: @purchase, url: group_purchases_path(@group) , local: true do |f| %>
+
+<div>
+  <div>
+    <%= f.label :name %> <br>
+    <%= f.text_field :name, :required => true %>
+  </div>
+
+  <div>
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount, :required => true %>
+  </div>
+
+  </br>
+  
+  <%= f.label :group %>
+  <%= f.select :group, options_from_collection_for_select(Group.all, :id, :name, params["group_id"]) %>
+  </br>
+  </br>
+
+  <%= f.submit %> <br>
+</div>
+
+<% end %>

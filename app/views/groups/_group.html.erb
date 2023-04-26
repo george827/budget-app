@@ -1,0 +1,11 @@
+<div class="d-flex">
+  <div class="item-img">
+    <%= image_tag group.icon, class: "img-icon" %>
+  <div>
+  <div class="item-content">
+    <P><%= group.name %></p>
+  </div>
+  <div class="item-price">
+    <P><%= group.purchases.map{|s| s.amount}.sum %></p>
+  </div>
+</div>
