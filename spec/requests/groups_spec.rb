@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe 'Groups', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
-      get '/groups/index'
+      get groups_path
       expect(response).to have_http_status(:success)
     end
   end
 
   describe 'GET /show' do
     it 'returns http success' do
-      get '/groups/show'
+      get '/groups/'
       expect(response).to have_http_status(:success)
     end
   end
