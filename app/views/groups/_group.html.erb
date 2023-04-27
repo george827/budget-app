@@ -1,11 +1,5 @@
-<div class="d-flex">
-  <div class="item-img">
+<li class="d-flex flex-row justify-content-between align-items-center card- mt-2">
     <%= image_tag group.icon, class: "img-icon" %>
-  <div>
-  <div class="item-content">
-    <P><%= group.name %></p>
-  </div>
-  <div class="item-price">
-    <P><%= group.purchases.map{|s| s.amount}.sum %></p>
-  </div>
-</div>
+    <P class="group-det"><%= group.name %></p>
+    <P class="me-3">Total: $<%= group.purchases.map{|s| s.amount}.sum %></p>
+</li>
