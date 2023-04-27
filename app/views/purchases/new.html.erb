@@ -1,27 +1,30 @@
-<h1>Purchases#new</h1>
+<div class="add-cat-nav">
+ <%= link_to  group_path(@group), class: "link-add-cat ps-2" do %>
+    <i class="fa-sharp fa-solid fa-arrow-left top-link"></i>
+  <% end %>
+  <h3 class="nav-add-cat">ADD TRANSACTION</h3>
+</div>
 
 
 <%= form_with model: @purchase, url: group_purchases_path(@group) , local: true do |f| %>
 
-<div>
-  <div>
-    <%= f.label :name %> <br>
-    <%= f.text_field :name, :required => true %>
+<div class="container-fluid">
+  <div class="field form-group">
+    <br>
+    <%= f.text_field :name, :required => true, placeholder: "Name", class: "form-control" %>
   </div>
 
-  <div>
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount, :required => true %>
+  <div class="field form-group"></br>
+    <%= f.text_field :amount, :required => true, placeholder: "Amount", class: "form-control" %>
   </div>
-
   </br>
-  
-  <%= f.label :group %>
-  <%= f.select :group, options_from_collection_for_select(Group.all, :id, :name, params["group_id"]) %>
+  <div class="form-group">
+    <%= select_tag :group, options_from_collection_for_select(Group.all, :id, :name, params["group_id"]), class: "form-con" %>
+  </div>
   </br>
-  </br>
-
-  <%= f.submit %> <br>
+  <div class="d-flex justify-content-center btn-p btn-b mb-5">
+    <%= f.submit "Create Purchase", class: "btn-prima ps-5 pe-5" %>
+  </div>
 </div>
 
 <% end %>

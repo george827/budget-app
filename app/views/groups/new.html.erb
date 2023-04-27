@@ -1,6 +1,11 @@
-<h1>Groups#new</h1>
+<div class="add-cat-nav">
+ <%= link_to  groups_path, class: "link-add-cat ps-2" do %>
+    <i class="fa-sharp fa-solid fa-arrow-left top-link"></i>
+  <% end %>
+  <h3 class="nav-add-cat">ADD CATEGORY</h3>
+</div>
 
-<%= form_with model: @group, url: groups_path, class: "new-category" do |form| %>
+<%= form_with model: @group, url: groups_path, class: "new-category container-fluid" do |form| %>
   <div>
     <% if @group.errors.any? %>
     <div style="color: red">
@@ -13,15 +18,18 @@
     </div>
   <% end %>
   <div class="form-field">
-    <%= form.text_field :name, placeholder: "Category name"%>
+  <br/>
+    <%= form.text_field :name, placeholder: "Category name", class: "form-control"%>
   </div>
-
+  <br/>
   <div class="form-field">
-    <%= form.text_field :icon, placeholder: "Link for icon" %>
+    <%= form.text_field :icon, placeholder: "Link for icon", class: "form-control" %>
   </div>
+  </div>
+  <br/>
+
+  <div class="d-flex justify-content-center btn-p btn-b mb-5">
+    <%= form.submit "Save", class: "btn-prima ps-5 pe-5" %>
   </div>
 
-  <div class="field">
-    <%= form.submit "Save", class: "new-catagory-container" %>
-  </div>
 <% end %>

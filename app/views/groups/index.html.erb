@@ -1,10 +1,22 @@
-<h1>Transaction</h1>
-<%= link_to "sign out", destroy_user_session_path, data: {turbo_method: :delete} %>
-
-    <% @groups.each do |group| %>
-    <%= link_to group_path(group) do %>
-      <%= render "group", group: group%>
+<div class="group-nav d-flex flex-row justify-content-between">
+ <%= link_to  groups_path, class: "link-add-cat ps-2" do %>
+    <i class="fa-sharp fa-solid fa-arrow-left top-link"></i>
+  <% end %>
+  <h3 class="nav-add-tras">TRANSACTIONS</h3>
+  <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "link-add-cat ps-2 top-link" do %>
+     <i class="fa-solid fa-arrow-right-from-bracket pe-2"></i>
+  <% end %>
+</div><br/>
+    <lu class="d-flex flex-column container-fluid">
+      <% @groups.each do |group| %>
+      <%= link_to group_path(group), class: "link-" do %>
+        <%= render "group", group: group%>
+        <% end %>
       <% end %>
-    <% end %>
-
-  <%= link_to "Add Item", new_group_path, class: "btn btn-primary" %>
+    </lu>
+    <br/>
+<div class="container-fluid">
+  <div class="d-flex justify-content-center  btn-p">
+    <%= link_to "Add Item", new_group_path, class: "btn-prima" %>
+  </div>
+</div>

@@ -13,16 +13,212 @@
  *= require_tree .
  *= require_self
  */
-.img-icon {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  object-position: center;
+
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+// _variables.scss
+$primary-color:  #3778c2; //blue
+$secondary-color: #434b54; //dark grey
+$tertiary-color: #5fb523; //green
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 400;
+  background-color: #f1f3f2 !important;
 }
 
-@media (max-width: 850px) {
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.link- {
+  text-decoration: none;
+}
+
+// log in page and sign up page
+.login-nav {
+  background-color: $primary-color;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.btn-n {
+  background-color: $primary-color;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.btn-n:hover {
+  color: $tertiary-color;
+}
+
+.top-link {
+  color: #fff;
+}
+
+.bottom-links {
+  align-items: center;
+}
+
+.bottom {
+  color: $secondary-color;
+  text-decoration: none;
+}
+
+.bottom:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+// transaction page
+
+.img-icon {
+  width: 100px;
+}
+
+.group-nav {
+  background-color: $primary-color;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.card- {
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  color: $secondary-color;
+  background-color: #fff;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.group-det {
+  font-weight: 400;
+}
+
+.btn-p {
+  background-color: $tertiary-color;
+  border-radius: 2px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.btn-prima {
+  background-color: $tertiary-color;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+//  add category page
+
+.add-cat-nav {
+  background-color: $primary-color;
+  height: 70px;
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-add-cat {
+  margin-left: 40%;
+}
+
+.btn-b {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.trans {
+  width: 100%;
+}
+
+.form-con {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: rgb(232, 232, 232) 1px solid;
+}
+
+.form-con:focus {
+  outline: none;
+  border: $primary-color 2px solid;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name {
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.hom {
+  position: absolute;
+  bottom: 0;
+}
+
+.prim {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 2px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.prima {
+  padding: 0.5rem;
+  border-radius: 2px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.home-log {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.home-sign {
+  color: $secondary-color;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
   .img-icon {
     width: 50px;
     height: 50px;
+  }
+
+  .app-name {
+    margin-top: 40vh;
   }
 }

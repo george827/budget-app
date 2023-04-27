@@ -7,7 +7,7 @@ class PurchasesController < ApplicationController
   end
 
   def create
-    @purchase = current_user.purchases.build(purchase_params)
+    @purchase = Purchase.new(purchase_params)
     @group = Group.find_by(id: params[:group_id])
     @group.purchases << @purchase
 
