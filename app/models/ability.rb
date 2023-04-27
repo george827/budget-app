@@ -10,8 +10,6 @@ class Ability
     can :manage, Group, author_id: user.id
     can :manage, Purchase, author_id: user.id
 
-
-
     # return unless user.is? :admin
 
     #   return unless user.present?
