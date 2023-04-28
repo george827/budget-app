@@ -9,4 +9,3 @@ Rails.application.routes.draw do
     resources :purchases, only: [:new, :create, :destroy]
   end
 end
-#  EDITOR="mate --wait" bin/rails credentials:edit
