@@ -1,8 +1,8 @@
 <div class="add-cat-nav">
- <%= link_to  groups_path, class: "link-add-cat ps-2" do %>
+ <%= link_to  groups_path, class: "link-add-cat" do %>
     <i class="fa-sharp fa-solid fa-arrow-left top-link"></i>
   <% end %>
-  <h3 class="nav-add-cat">DETAILS</h3>
+  <h3 class="nav-add-cat mt-1">DETAILS</h3>
 </div>
 
 <div class="container-fluid">
@@ -17,7 +17,7 @@
     </li>
     <%end%>
   </ul>
-  <div class="d-flex justify-content-center btn-p">
+  <div class="d-flex justify-content-center btn-p hom details-bt">
     <%= link_to "New Purchase", new_group_purchase_path(@group), class: "btn-prima" %>
   </div>
   </div>
