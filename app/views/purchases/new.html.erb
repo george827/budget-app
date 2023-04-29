@@ -1,0 +1,30 @@
+<div class="add-cat-nav">
+ <%= link_to  group_path(@group), class: "link-add-cat ps-2" do %>
+    <i class="fa-sharp fa-solid fa-arrow-left top-link"></i>
+  <% end %>
+  <h3 class="nav-add-cat-t">ADD TRANSACTION</h3>
+</div>
+
+
+<%= form_with model: @purchase, url: group_purchases_path(@group) , local: true do |f| %>
+
+<div class="container-fluid">
+  <div class="field form-group">
+    <br>
+    <%= f.text_field :name, :required => true, placeholder: "Name", class: "form-control" %>
+  </div>
+
+  <div class="field form-group"></br>
+    <%= f.text_field :amount, :required => true, placeholder: "Amount", class: "form-control" %>
+  </div>
+  </br>
+  <div class="form-group">
+    <%= select_tag :group, options_from_collection_for_select(Group.all, :id, :name, params["group_id"]), class: "form-con" %>
+  </div>
+  </br>
+  <div class="d-flex justify-content-center btn-p btn-b">
+    <%= f.submit "Create Purchase", class: "btn-prima ps-5 pe-5" %>
+  </div>
+</div>
+
+<% end %>

@@ -1,0 +1,5 @@
+<li class="d-flex flex-row justify-content-between align-items-center card- mt-2">
+    <%= image_tag group.icon, class: "img-icon" %>
+    <P class="group-det"><%= group.name %></p>
+    <P class="me-3">Total: $<%= group.purchases.map{|s| s.amount}.sum %></p>
+</li>

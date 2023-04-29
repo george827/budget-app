@@ -1,0 +1,35 @@
+<div class="add-cat-nav">
+ <%= link_to  groups_path, class: "link-add-cat ps-2" do %>
+    <i class="fa-sharp fa-solid fa-arrow-left top-link"></i>
+  <% end %>
+  <h3 class="nav-add-cat">ADD CATEGORY</h3>
+</div>
+
+<%= form_with model: @group, url: groups_path, class: "new-category container-fluid" do |form| %>
+  <div>
+    <% if @group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this category from being saved:</h2>
+      <ul>
+        <% @group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-field">
+  <br/>
+    <%= form.text_field :name, placeholder: "Category name", class: "form-control"%>
+  </div>
+  <br/>
+  <div class="form-field">
+    <%= form.text_field :icon, placeholder: "Link for icon", class: "form-control" %>
+  </div>
+  </div>
+  <br/>
+
+  <div class="d-flex justify-content-center btn-p btn-b">
+    <%= form.submit "Save", class: "btn-prima ps-5 pe-5" %>
+  </div>
+
+<% end %>
