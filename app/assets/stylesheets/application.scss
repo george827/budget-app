@@ -134,12 +134,8 @@ li {
   font-size: 1.1rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-}
-
-.nav-add-cat {
-  margin-left: 40%;
 }
 
 .btn-b {
@@ -228,13 +224,11 @@ li {
   }
 
   .nav-add-cat {
-    margin-left: 40%;
     font-size: 14px;
     font-weight: 500;
   }
 
   .nav-add-cat-t {
-    margin-left: 30%;
     font-size: 14px;
     font-weight: 500;
   }
