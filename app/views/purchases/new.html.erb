@@ -8,7 +8,7 @@
 
 <%= form_with model: @purchase, url: group_purchases_path(@group) , local: true do |f| %>
 
-<div class="container-fluid remove-kesho">
+<div class="container-fluid">
   <div class="field form-group">
     <br>
     <%= f.text_field :name, :required => true, placeholder: "Name", class: "form-control" %>
