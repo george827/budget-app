@@ -19,7 +19,7 @@
   </div>
   </br>
   <div class="form-group remove-kesho">
-    <%= select_tag :group, options_from_collection_for_select(Group.all, :id, :name, params["group_id"]), class: "form-con" %>
+    <%= select_tag :group, options_from_collection_for_select(Group.all, :id, :name, params["group_id"]), class: "form-con remove-kesho" %>
   </div>
   </br>
   <div class="d-flex justify-content-center btn-p btn-b">
